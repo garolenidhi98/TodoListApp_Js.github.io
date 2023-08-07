@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+/* body section */
+body{
+    height:100vh;
+    background:linear-gradient(150deg,#83e3f2cb 0%,#f877b7b6 90%);
+}
+
+/* container section */
+.container{
+    position :relative;
+    max-width:800px;
+    padding: 20px;
+    margin:0 auto;
+}
+
+/* add task section */
+.addTask{
+    padding:15px 0;
+    width:100%; 
+    display:flex;
+} 
+
+/* input section */
+.addTask > input[type="text"]{
+    width:90%;
+    color:#333;
+    border:none;
+    border-bottom:2px solid #666;
+    background:none;
+    padding:10px;
+    font-size: 20px;
+    outline:none;
+}
+
+/* for button */
+.addTask button{
+    color:#fff;
+    border:none;
+    background:#222; 
+    padding:10px;
+    font-size: 18px;
+    outline:none;
+    margin:0 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+/* for completed not completed section */
+.notCompleted , .Completed{
+    margin: 10px 0;
+    padding: 20px;
+}
+
+/* headings */
+h4{
+    text-transform: uppercase;
+    color:#343333;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* ordered list */
+ol{
+    list-style: none;
+    counter-reset:my-counter; 
+}
+
+/* list section */
+ol li{
+    width:100%;
+    padding: 18px;
+    margin: 5px 0;
+    background: linear-gradient(150deg,#2cc6decb 20%,#d45a97b6 90%);
+    font-size: 20px;
+    counter-increment: my-counter;
+}
+
+ol.Completed li{
+    background: linear-gradient(150deg,#d45a97b6 20%,#2cc6decb 90%);
+}
+
+ol li::before{
+   content:counter(my-counter);
+   background: #9f9e9e;
+   width:2rem;
+   height:2rem;
+   border-radius: 50%; 
+   display:inline-block;
+   line-height:2rem;
+   text-align:center;
+   color:#343333;
+   margin-right: 0.5rem; 
+}
+/* list button */
+li button{
+    float: right;
+    padding: 5px;
+    font-size: 20px;
+    line-height:20px;
+    margin-right: 15px;
+    background: none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+} 
